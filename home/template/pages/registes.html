@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X=UA-Compatible" content= "ie=edge">
+        <title>Sign-up</title>
+        <style>
+            html, body {
+                height: 100%;
+                background-color: mistyrose;
+                padding-top: 60px;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="
+        width: 520px;
+        height: 350px;
+        flex-direction: column;
+        display: flex;
+        margin-left: 500px;
+        border: 2px solid purple;
+        border-radius: 20px;">
+                <form method="POST" 
+                action='.' 
+                style="
+                color: #006600; 
+                text-decoration: none; 
+                padding: 6px 10px; 
+                margin-left: 165px; 
+                width: 150px; 
+                border-radius: 20px; 
+                text-shadow: 1px 0px #003300">
+                    {% csrf_token %}
+                    <center> <h2 style="color: #005500; text-shadow: 1px 0px #002200">Sign Up</h2> </center>
+                    {{ form.as_p }}		
+                    <center > <input style="border: 1px outset; color: orange" type="submit" value="Register" /></center>
+                </form>
+        </div>
+    </body>
+</html> 
